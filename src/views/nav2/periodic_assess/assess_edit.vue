@@ -251,9 +251,16 @@
                 add_target:'',
                 edu_tactice:'',
                 relate_service:'',
+
+                isEdit:'',
             }
         },
         async mounted() {
+            window.onbeforeunload = () =>{
+                this.releaseDQPG();
+                return 'tips';
+            }
+            this.isEdit = this.$route.query.isEdit;
             this.init_options();
             if(this.$route.query.isEdit == 2){
                 this.readPA();
@@ -265,8 +272,21 @@
                 this.disabled = false;
             }
         },
+        destroyed() {
+            this.releaseDQPG();
+        },
 
         methods:{
+            releaseDQPG()
+            {
+                if (this.isEdit == 1) {
+                    var ID = this.$store.state.PA[0].id;
+                    this.$http.post('/api/stu/DQPGFinish', {
+                        ID: ID
+                    }, {});
+                }
+            },
+
             //初始化选项
             init_options(){
                 //初始化分析人选项

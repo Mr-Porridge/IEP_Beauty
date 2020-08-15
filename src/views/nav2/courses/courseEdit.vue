@@ -135,11 +135,21 @@
         evaluation:{},
         termTarget:{},
         appraisal:[],
+
+        isEdit:'',
       }
     },
     mounted(){
+      window.onbeforeunload = () =>{
+        this.releaseKCPL();
+        return 'tips';
+      }
       this.init();
+      this.isEdit = this.$route.query.isEdit;
       console.log(JSON.parse(this.$store.state.stuinfo[0].Courses));
+    },
+    destroyed() {
+      this.releaseKCPL();
     },
     methods:{
       async init(){
@@ -158,6 +168,16 @@
         this.field1_traverse();
         this.evaDate = this.getDate();
         this.getStuAppraisal();
+      },
+
+      releaseKCPL()
+      {
+        if (this.isEdit == 1) {
+          var stuID = this.$store.state.stuinfo[0].student_id;
+          this.$http.post('/api/stu/KCPLFinish', {
+            StuID: stuID
+          }, {});
+        }
       },
 
       //获取评量分析的文字描述

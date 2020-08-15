@@ -103,7 +103,7 @@
         },
         methods:{
            //跳转至课程评量界面
-           to_edit(id,isEdit){
+           async to_edit(id,isEdit){
                if (isEdit == 0 && this.editPermission != 1){
                    this.$message.warning("暂无权限！");
                    return;
@@ -116,6 +116,26 @@
                    this.$message.warning("暂无权限！");
                    return;
                }
+
+               var flag = true;
+
+               if(isEdit == 1)
+               {
+                   await this.$http.post('/api/stu/checkDQPG',{
+                       ID:id
+                   },{}).then((response) => {
+                       if(!response.body)
+                           flag = false;
+                       else
+                           flag = true;
+                   });
+               }
+
+               if(!flag){
+                   this.$message.warning("正在被编辑！");
+                   return;
+               }
+
                if (isEdit === 1 || isEdit === 2) {
                    this.$http.post('/api/stu/quePA', {
                        id: id

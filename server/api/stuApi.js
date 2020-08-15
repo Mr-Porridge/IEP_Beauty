@@ -8,6 +8,9 @@ var $sql = require('../sqlMap');
 const path = require('path');
 const fs = require('fs');
 
+var KCPL = [];
+var PLFX = [];
+var DQPG = [];
 
 //返回一个随机字母数字
 function getCharacter(flag){
@@ -1793,6 +1796,97 @@ router.post('/isStuExist',(req, res) => {
       jsonWrite(res, result);
     }
   })
+});
+
+
+router.post('/checkKCPL',(req, res) => {
+  var stuID = req.body.StuID;
+  var result = false;
+
+  console.log(stuID);
+
+  if(KCPL.includes(stuID))
+    result = false;
+  else
+  {
+    KCPL[KCPL.length] = stuID;
+    result = true;
+  }
+
+  console.log(KCPL)
+  jsonWrite(res, result);
+
+});
+
+router.post('/KCPLFinish',(req, res) => {
+  var stuID = req.body.StuID;
+
+  if(KCPL.includes(stuID))
+    KCPL.splice(KCPL.indexOf(stuID),1);
+
+  console.log(KCPL)
+});
+
+
+
+
+router.post('/checkPLFX',(req, res) => {
+  var stuID = req.body.StuID;
+  var result = false;
+
+  console.log(stuID);
+
+  if(PLFX.includes(stuID))
+    result = false;
+  else
+  {
+    PLFX[PLFX.length] = stuID;
+    result = true;
+  }
+
+  console.log(PLFX)
+  jsonWrite(res, result);
+
+});
+
+router.post('/PLFXFinish',(req, res) => {
+  var stuID = req.body.StuID;
+
+  if(PLFX.includes(stuID))
+    PLFX.splice(PLFX.indexOf(stuID),1);
+
+  console.log(PLFX)
+});
+
+
+
+
+router.post('/checkDQPG',(req, res) => {
+  var ID = req.body.ID;
+  var result = false;
+
+  console.log(ID);
+
+  if(DQPG.includes(ID))
+    result = false;
+  else
+  {
+    DQPG[DQPG.length] = ID;
+    result = true;
+  }
+
+  console.log(DQPG)
+  jsonWrite(res, result);
+
+});
+
+router.post('/DQPGFinish',(req, res) => {
+  var ID = req.body.ID;
+
+  if(DQPG.includes(ID))
+    DQPG.splice(DQPG.indexOf(ID),1);
+
+  console.log(DQPG)
 });
 
 
