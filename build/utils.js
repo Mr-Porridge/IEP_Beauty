@@ -1,6 +1,6 @@
-var path = require('path')
-var config = require('../config')
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
+var path = require('path');
+var config = require('../config');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const px2remLoader = {
   //这里更改比例系数可以调整页面缩放的大小
@@ -8,7 +8,7 @@ const px2remLoader = {
     options: {
         remUnit: 54
     }
-}
+};
 
 
     exports.assetsPath = function (_path) {

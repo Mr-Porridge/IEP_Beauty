@@ -1,6 +1,6 @@
 <template>
   <section>
-    <el-main style="height: 410px">
+
       <div class="custom-tree-container">
         <div class="block">
           <el-tree :data="list" :props="defaultProps" @node-click="handleNodeClick" :render-content="renderContent"></el-tree>
@@ -88,7 +88,7 @@
           </el-dialog>
         </div>
       </div>
-    </el-main>
+
     <el-button type="danger" class="button-bottom" @click="append1()">新 建</el-button>
   </section>
 </template>

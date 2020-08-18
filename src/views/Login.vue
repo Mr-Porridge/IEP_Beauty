@@ -112,7 +112,8 @@
                                 localStorage.setItem('Permission', permission);
                                 localStorage.setItem('rank', rank);
                                 //document.cookie = `Authorization=${res.headers.authorization}`;
-                                this.$router.push({path: '/newContact'});
+                                // 登陆后跳转页面
+                                this.$router.push({path: '/HomePage'});
                             }
                         });
                     } else {

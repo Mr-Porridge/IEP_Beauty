@@ -1,17 +1,20 @@
 <template>
   <el-row class="container">
     <el-col :span="24" class="header">
-      <el-col :span="10" class="logo" :class="collapsed?'logo-collapse-width':'logo-width'">
-        <img :src="this.logo" alt=""/>
-        {{collapsed?'':sysName}}
+<!--      <el-col :span="10" class="logo" :class="collapsed?'logo-collapse-width':'logo-width'" style="font-size: x-large">-->
+      <el-col :span="10" class="logo" style="font-size: large;">
+      <img :src="this.logo" alt=""/>
+        <strong>{{collapsed?'':sysName}}</strong>
       </el-col>
-      <el-col :span="10">
-        <div class="tools" @click.prevent="collapse">
+      <!--收起导航栏 st-->
+<!--      <el-col :span="10">-->
+<!--        <div class="tools" @click.prevent="collapse">-->
 
-          <i class="fa fa-indent fa-2x" aria-hidden="true" style="color:#d61117;"></i>
+<!--          <i class="fa fa-indent fa-2x" aria-hidden="true" style="color:#d61117;"></i>-->
 
-        </div>
-      </el-col>
+<!--        </div>-->
+<!--      </el-col>-->
+      <!--收起导航栏 ed-->
       <el-col :span="4" class="userinfo">
         <el-dropdown trigger="hover">
                     <span class="el-dropdown-link userinfo-inner">

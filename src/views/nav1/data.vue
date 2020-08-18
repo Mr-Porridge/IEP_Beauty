@@ -58,8 +58,6 @@
           <el-button @click="packageTwo">套餐二</el-button>&lt;!&ndash;通过 key 设置&ndash;&gt;-->
           <!-- <el-button @click="showList">输出List1&2</el-button>-->
         </el-main>
-        <el-main>
-        </el-main>
       </div>
     </div>
 

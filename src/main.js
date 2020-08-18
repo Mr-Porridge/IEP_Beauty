@@ -3,7 +3,7 @@ import Vue from 'vue'
 import App from './App'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
-//import './assets/theme/theme-green/index.css'
+// import './assets/theme/theme-green/index.css'
 import VueRouter from 'vue-router'
 //import store from './vuex/store'
 
@@ -30,7 +30,7 @@ Vue.use(ElementUI, { size: 'small', zIndex: 3000 });
 Vue.use(VueRouter);
 Vue.use(Vuex);
 Vue.use(VueResource);
-Vue.use(wordExport)
+Vue.use(wordExport);
 //NProgress.configure({ showSpinner: false });
 
 const router = new VueRouter({

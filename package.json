@@ -29,7 +29,7 @@
     "nprogress": "^0.2.0",
     "px2rem-loader": "^0.1.9",
     "vue": "^2.2.2",
-    "vue-ckeditor5": "^0.1.5",
+    "vue-ckeditor5": "^0.1.6",
     "vue-resource": "^1.5.1",
     "vuex": "^2.0.0-rc.6",
     "xlsx": "^0.15.4"

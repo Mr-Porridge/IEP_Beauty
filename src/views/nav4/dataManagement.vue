@@ -64,8 +64,7 @@
           <el-button @click="setCheckedKeys">套餐二</el-button>&lt;!&ndash;通过 key 设置&ndash;&gt;
           <el-button @click="resetChecked">清空所选项</el-button>
         </el-main>-->
-        <el-main>
-        </el-main>
+
       </div>
     </div>
   </section>
@@ -376,7 +375,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   .custom-tree-node {
     flex: 1;
     display: flex;
@@ -386,13 +385,7 @@ export default {
     padding-right: 8px; /*右侧宽度*/
   }
 
-  .el-header, .el-footer {
-    background-color: #B3C0D1;
-    color: #333;
-    margin: 0px;
-    text-align: center;
-    line-height: 60px;
-  }
+
 
 
   .el-main {
