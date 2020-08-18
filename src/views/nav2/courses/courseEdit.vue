@@ -56,7 +56,7 @@
               <span style="float: right; color: #8492a6; font-size: 13px">{{ item.isEvaluated }}</span>
             </el-option>
           </el-select>
-        </el-form-item><br>
+         </el-form-item><br>
         <el-form-item style="padding-left: 1em" label="项目">
           <el-select  v-model="project_value"   placeholder="请选择" @change="pro_item_traverse()">
             <el-option v-for="(item,index) in project"
@@ -135,11 +135,21 @@
         evaluation:{},
         termTarget:{},
         appraisal:[],
+
+        isEdit:'',
       }
     },
     mounted(){
+      window.onbeforeunload = () =>{
+        this.releaseKCPL();
+        return 'tips';
+      }
       this.init();
+      this.isEdit = this.$route.query.isEdit;
       console.log(JSON.parse(this.$store.state.stuinfo[0].Courses));
+    },
+    destroyed() {
+      this.releaseKCPL();
     },
     methods:{
       async init(){
@@ -158,6 +168,16 @@
         this.field1_traverse();
         this.evaDate = this.getDate();
         this.getStuAppraisal();
+      },
+
+      releaseKCPL()
+      {
+        if (this.isEdit == 1) {
+          var stuID = this.$store.state.stuinfo[0].student_id;
+          this.$http.post('/api/stu/KCPLFinish', {
+            StuID: stuID
+          }, {});
+        }
       },
 
       //获取评量分析的文字描述
@@ -222,6 +242,8 @@
         if (evaluatedCourses == undefined)
           evaluatedCourses = [];
 
+        console.log("evaluatedCourses:");
+        console.log(evaluatedCourses);
         for(var j = 0; j < evaluatedCourses.length; j++)
           if(evaluatedCourses[j].领域 == this.field_label)
             evaluatedSe = evaluatedCourses[j].child;
@@ -422,6 +444,8 @@
                       for (var n = 0; n < Courses[i].evaluatedCourses[j].child[k].child.length; n++)
                         if (isAdded || Courses[i].evaluatedCourses[j].child[k].child[n] == this.project_label) {
                           isAdded = true;
+                          if (Courses[i].evaluatedCourses[j].child[k].child.length == this.project.length)
+                            Courses[i].evaluatedCourses[j].child[k].allComplete = true;
                           break;
                         } else if (n == Courses[i].evaluatedCourses[j].child[k].child.length - 1) {
                           Courses[i].evaluatedCourses[j].child[k].child.push(this.project_label)
@@ -471,12 +495,12 @@
                 if (num == this.project.length) {
                   if (Courses[i].completedCourses.length == 0)
                     Courses[i].completedCourses.push(this.evaluation.领域);
-                  else
-                    for (var n = 0; n < Courses[i].completedCourses.length; n++)
-                      if (Courses[i].completedCourses[n] != this.evaluation.领域 && n+1 == Courses[i].completedCourses.length)
-                        Courses[i].completedCourses.push(this.evaluation.领域);
+                  else if (Courses[i].completedCourses.indexOf(this.evaluation.领域) == -1)
+                    Courses[i].completedCourses.push(this.evaluation.领域);
                 }
                 var progress = (Courses[i].completedCourses.length / this.field1.length).toFixed(2) * 100;
+                if(progress >= 100)
+                  progress = 100;
                 Courses[i].progress = progress;
                 if (Courses[i].progress == 100)
                   Courses[i].status = 'success';
@@ -520,12 +544,12 @@
                 if (num == this.project.length) {
                   if (Courses[i].completedCourses.length == 0)
                     Courses[i].completedCourses.push(this.evaluation.领域);
-                  else
-                    for (var n = 0; n < Courses[i].completedCourses.length; n++)
-                      if (Courses[i].completedCourses[n] != this.evaluation.领域 && n+1 == Courses[i].completedCourses.length)
-                        Courses[i].completedCourses.push(this.evaluation.领域);
+                  else if (Courses[i].completedCourses.indexOf(this.evaluation.领域) == -1)
+                    Courses[i].completedCourses.push(this.evaluation.领域);
                 }
-                var progress = (Courses[i].completedCourses.length / this.field1.length).toFixed(2) * 100;
+                var progress = (Courses[i].completedCourses.length / this.field1.lengsssth).toFixed(2) * 100;
+                if(progress >= 100)
+                  progress = 100;
                 Courses[i].progress = progress;
                 if (Courses[i].progress == 100)
                   Courses[i].status = 'success';

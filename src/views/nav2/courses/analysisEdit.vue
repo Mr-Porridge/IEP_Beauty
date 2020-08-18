@@ -131,6 +131,7 @@
         },
         data(){
             return{
+                isEdit:'',
                 show:false,
                 isOneTerm:false,
                 field1: [],
@@ -181,14 +182,32 @@
             }
         },
         mounted(){
+            window.onbeforeunload = () =>{
+                this.releasePLFX();
+                return 'tips';
+            }
             this.stu_id = this.$store.state.stuinfo[0].student_id;
+            this.isEdit = this.$route.query.isEdit;
             this.changedata();
             this.field1_traverse();
             this.evaDate = this.getDate();
 
         },
+        destroyed() {
+            this.releasePLFX();
+        },
 
         methods:{
+            releasePLFX()
+            {
+                if (this.isEdit == 1) {
+                    var stuID = this.$store.state.stuinfo[0].student_id;
+                    this.$http.post('/api/stu/PLFXFinish', {
+                        StuID: stuID
+                    }, {});
+                }
+            },
+
             getDate() {
                 var date = new Date();
                 var seperator1 = "-";

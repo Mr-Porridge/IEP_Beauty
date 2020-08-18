@@ -724,7 +724,7 @@
             },
 
             //跳转至课程评量界面
-            to_edit(stuID,schoolYear,term,isEdit){
+            async to_edit(stuID,schoolYear,term,isEdit){
                 if (isEdit == 1 && this.editPermission != 1){
                     this.$message.warning("暂无权限！");
                     return;
@@ -733,6 +733,26 @@
                     this.$message.warning("暂无权限！");
                     return;
                 }
+
+                var flag = true;
+
+                if(isEdit == 1)
+                {
+                    await this.$http.post('/api/stu/checkPLFX',{
+                        StuID:stuID
+                    },{}).then((response) => {
+                        if(!response.body)
+                            flag = false;
+                        else
+                            flag = true;
+                    });
+                }
+
+                if(!flag){
+                    this.$message.warning("正在被编辑！");
+                    return;
+                }
+
                 this.$http.post('/api/stu/queryStuinfo',{
                     AStuID:stuID
                 },{}).then((response) => {

@@ -226,6 +226,13 @@ let routes = [
                 iconCls: 'el-icon-s-marketing',
             },
             {
+                path: '/evalAnaList',
+                component: evalAnaList,
+                name: '学生评量分析',
+                authority: [1, 1, 1, 1, 1],
+                hidden: true
+            },
+            {
                 path: '/schoolTables',
                 component:() => import('./views/nav2/schoolTables/schoolTables.vue'),
                 name: '课程选择',
