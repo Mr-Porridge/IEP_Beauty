@@ -227,7 +227,7 @@ let routes = [
             },
             {
                 path: '/evalAnaList',
-                component: evalAnaList,
+                component: () => import('./views/nav2/courses/evalAnaList'),
                 name: '学生评量分析',
                 authority: [1, 1, 1, 1, 1],
                 hidden: true
@@ -381,7 +381,7 @@ let routes = [
             },
             {
                 path: '/groupSubjectTeaEdit',
-                component:() => import('./views/nav3/groupSubjectEdit.vue'),
+                component:() => import('./views/nav3/groupSubjectTeaEdit.vue'),
                 name: '集体学科教学设计编辑',
                 authority: [1, 1, 1, 1, 1],
                 hidden: true
