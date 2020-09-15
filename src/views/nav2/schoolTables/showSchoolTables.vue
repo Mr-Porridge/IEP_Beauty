@@ -147,6 +147,22 @@ export default {
                     'studentId': this.$route.query.row.studentId
                 }
             }).then((res) => {
+                const current = new Date();
+                const y = current.getFullYear();
+                this.yearOptions.push(
+                    {
+                        value: (y - 1) + "-" + y,
+                        label: (y - 1) + "-" + y + "学年",
+                    },
+                    {
+                        value: y + "-" + (y + 1),
+                        label: y + "-" + (y + 1) + "学年",
+                    },
+                    {
+                        value: y + 1 + "-" + (y + 2),
+                        label: y + 1 + "-" + (y + 2) + "学年",
+                    },
+                );
                 if (res.data.data === null) {
                     alert('该学生暂无' + '2019-2020学年 第 1 学期 ' + '课表！请查看其他学期课表！');
                     return
@@ -175,22 +191,7 @@ export default {
                 this.coursesNames.splice(48, 0, {id: 107, mes: '第七节课'});
                 //console.log(this.coursesNames)
                 // console.log(this.yearOptions);
-                const current = new Date();
-                const y = current.getFullYear();
-                this.yearOptions.push(
-                    {
-                        value: (y - 1) + "-" + y,
-                        label: (y - 1) + "-" + y + "学年",
-                    },
-                    {
-                        value: y + "-" + (y + 1),
-                        label: y + "-" + (y + 1) + "学年",
-                    },
-                    {
-                        value: y + 1 + "-" + (y + 2),
-                        label: y + 1 + "-" + (y + 2) + "学年",
-                    },
-                )
+
             })
         },
         getParams() {

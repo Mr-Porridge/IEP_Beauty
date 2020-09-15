@@ -183,6 +183,7 @@ export default {
                     'studentId': this.studentId,
                 }
             }).then((res) => {
+
                 //console.log(res.data.data)
                 //console.log(res.data.data.courses)
                 //console.log(JSON.parse(res.data.data.courses))

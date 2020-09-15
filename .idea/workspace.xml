@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2eca5540-147b-4f90-b71e-8cab327b0b91" name="Default" comment="2020-3.22：定期评估分析">
-      <change afterPath="$PROJECT_DIR$/src/views/HomePage.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/nav2/courses/evalAnaList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/nav1/classManagement.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/nav1/classManagement.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/nav1/data.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/nav1/data.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/nav2/courses/courseEvaluation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/nav2/courses/courseEvaluation.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/nav2/courses/evaluationAnalysis.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/nav2/courses/evaluationAnalysis.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/nav4/courseManagement.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/nav4/courseManagement.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/nav4/dataManagement.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/nav4/dataManagement.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/nav4/schoolManagement.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/nav4/schoolManagement.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/nav2/schoolTables/editSchoolTables.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/nav2/schoolTables/editSchoolTables.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/nav2/schoolTables/showSchoolTables.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/nav2/schoolTables/showSchoolTables.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,11 +35,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/HomePage.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="244" column="44" selection-start-line="244" selection-start-column="44" selection-end-line="244" selection-end-column="44" />
+            <state relative-caret-position="368">
+              <caret line="241" column="13" selection-start-line="241" selection-start-column="13" selection-end-line="241" selection-end-column="13" />
               <folding>
                 <element signature="n#style#0;n#el-row#0;n#section#0;n#template#0;n#!!top" expanded="true" />
                 <element signature="n#el-col#0;n#el-row#0;n#section#0;n#template#0;n#!!top" />
@@ -72,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/routes.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/views/nav2/schoolTables/editSchoolTables.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-207">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="96">
+              <caret line="197" column="35" selection-start-line="197" selection-start-column="35" selection-end-line="197" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -118,6 +105,7 @@
       <find>router</find>
       <find>sysName</find>
       <find>评估</find>
+      <find>yearOptions</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -147,6 +135,8 @@
         <option value="$PROJECT_DIR$/src/views/HomePage.vue" />
         <option value="$PROJECT_DIR$/src/views/Home.vue" />
         <option value="$PROJECT_DIR$/build/utils.js" />
+        <option value="$PROJECT_DIR$/src/views/nav2/schoolTables/showSchoolTables.vue" />
+        <option value="$PROJECT_DIR$/src/views/nav2/schoolTables/editSchoolTables.vue" />
       </list>
     </option>
   </component>
@@ -179,6 +169,11 @@
             <path>
               <item name="dataManagementPlatform" type="b2602c69:ProjectViewProjectNode" />
               <item name="dataManagementPlatform" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dataManagementPlatform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dataManagementPlatform" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -367,6 +362,7 @@
       <workItem from="1596773781759" duration="10647000" />
       <workItem from="1597318411767" duration="81000" />
       <workItem from="1597367336915" duration="2065000" />
+      <workItem from="1600152394490" duration="1021000" />
     </task>
     <task id="LOCAL-00001" summary="2020-3.22：定期评估分析">
       <created>1584846995292</created>
@@ -379,7 +375,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38221000" />
+    <option name="totallyTimeSpent" value="39242000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -393,7 +389,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49452955" visible="true" weight="0.22081016" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49452955" visible="true" weight="0.223193" />
       <window_info id="npm" order="1" sideWeight="0.50547045" side_tool="true" weight="0.19936457" />
       <window_info id="Structure" order="2" sideWeight="0.5053192" side_tool="true" weight="0.19936457" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -403,13 +399,13 @@
       <window_info id="UI Designer" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32719547" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" weight="0.20066334" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" weight="0.19900498" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39966834" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.4394693" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.27363184" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5013405" side_tool="true" weight="0.23087819" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.3283582" />
       <window_info anchor="bottom" id="Statistic" order="11" weight="0.32857144" />
@@ -522,11 +518,6 @@
     <state width="1493" height="127" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585173295475" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/views/nav1/ecoAssessment/CapacityStatus_2.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-31" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/vue-ckeditor5/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -766,13 +757,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/nav2/schoolTables/showSchoolTables.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="49" column="51" selection-start-line="49" selection-start-column="51" selection-end-line="49" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/gantong.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -873,15 +857,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-207">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="345">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/nav2/schoolTables/showSchoolTables.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1403">
+          <caret line="152" column="21" lean-forward="true" selection-start-line="152" selection-start-column="21" selection-end-line="152" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/HomePage.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="244" column="44" selection-start-line="244" selection-start-column="44" selection-end-line="244" selection-end-column="44" />
+        <state relative-caret-position="368">
+          <caret line="241" column="13" selection-start-line="241" selection-start-column="13" selection-end-line="241" selection-end-column="13" />
           <folding>
             <element signature="n#style#0;n#el-row#0;n#section#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#el-col#0;n#el-row#0;n#section#0;n#template#0;n#!!top" />
@@ -897,6 +888,13 @@
             <element signature="n#el-col#5;n#el-row#0;n#section#0;n#template#0;n#!!top" />
             <element signature="n#style#0;n#div#0;n#el-card#0;n#div#0;n#el-col#5;n#el-row#0;n#section#0;n#template#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/nav2/schoolTables/editSchoolTables.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="197" column="35" selection-start-line="197" selection-start-column="35" selection-end-line="197" selection-end-column="35" />
         </state>
       </provider>
     </entry>
