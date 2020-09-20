@@ -22,11 +22,11 @@
     <el-divider content-position="center"></el-divider>
 
     <!--发展性评估-->
-    <h2>发展性评估</h2>
+<!--    <h2>发展性评估</h2>-->
 
     <div class="buttons">
       <el-checkbox-group v-model="checked" @change="handleChecked">
-        <el-checkbox v-for="item in tables" :label="item" :key="item" border>表{{item}}</el-checkbox>
+        <el-checkbox v-for="item in tables" :label="item" :key="item" border>{{item}}</el-checkbox>
       </el-checkbox-group>
     </div>
 
@@ -50,7 +50,7 @@
         data() {
             return {
                 checked: [],
-                tables: [1, 2, 3, 4, 5],
+                tables: ["母亲孕史", "兴趣爱好", "健康状况", "能力现状-1", "能力现状-2"],
             };
         },
         mounted() {
