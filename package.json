@@ -32,7 +32,7 @@
     "vue-ckeditor5": "^0.1.6",
     "vue-resource": "^1.5.1",
     "vuex": "^2.0.0-rc.6",
-    "xlsx": "^0.15.4"
+    "xlsx": "^0.17.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.2",
